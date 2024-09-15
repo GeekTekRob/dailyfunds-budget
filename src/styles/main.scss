@@ -1,0 +1,10 @@
+@import 'variables';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.my-component {
+    color: $primary-color;
+    padding: $spacing-md;
+    font-weight: $font-weight-medium;
+  }
