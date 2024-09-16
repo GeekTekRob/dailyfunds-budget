@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [CommonModule, RouterOutlet, RouterLink, MatToolbarModule, MatButtonModule],
+  template: `
+    <mat-toolbar color="primary">
+      <img src="imgs/DailyfundsBudget_1280.png" width="50px" />
+      <a mat-button routerLink="/dashboard">Dashboard</a>
+      <a mat-button routerLink="/accounts">Accounts</a>
+      <a mat-button routerLink="/bills">Bills</a>
+      <a mat-button routerLink="/recurring-payments">Recurring Payments</a>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  `,
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'dailyfunds-budget';

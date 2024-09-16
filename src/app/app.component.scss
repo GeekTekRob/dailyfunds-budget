@@ -1,0 +1,11 @@
+@import '../../src/styles/variables.scss';
+
+.mat-toolbar {
+    background-color: $primary-color;
+    color: $white;
+
+    .mdc-button:hover{
+        color: $light-gray;
+        font-weight: 700;
+    }
+}
