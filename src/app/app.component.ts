@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [CommonModule, RouterOutlet, RouterLink, MatToolbarModule, MatButtonModule],
   template: `
     <mat-toolbar color="primary">
-      <span>DailyFunds Budget</span>
+      <img src="imgs/DailyfundsBudget_1280.png" width="50px" />
       <a mat-button routerLink="/dashboard">Dashboard</a>
       <a mat-button routerLink="/accounts">Accounts</a>
       <a mat-button routerLink="/bills">Bills</a>
